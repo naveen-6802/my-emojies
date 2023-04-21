@@ -45,23 +45,22 @@ function pushAndUnshift(eve, emojis) {
 }
 
 function popAndShift(eve, emojis) {
-    eve
-    localStorage.setItem("myEmojies", JSON.stringify(emojis))
-    render(emojis)
+    localStorage.setItem("myEmojies", JSON.stringify(emojis));
+    render(emojis);
 }
 
 pushBtn.addEventListener("click", function(){
     pushAndUnshift(myEmojis.push(emojiInput.value), myEmojis)
-})
+});
 
 unshiftBtn.addEventListener("click", function(){
     pushAndUnshift(myEmojis.unshift(emojiInput.value), myEmojis)
-})
+});
 
 popBtn.addEventListener("click", function() {
     popAndShift(myEmojis.pop(), myEmojis)
-})
+});
 
 shiftBtn.addEventListener("click", function() {
     popAndShift(myEmojis.shift(), myEmojis)
-})
+});
